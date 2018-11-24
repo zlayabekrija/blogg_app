@@ -1,0 +1,8 @@
+
+    <h3><%= @article.title %></h3>
+    <p><%= @article.created_at %></p>
+    <p><%= @article.body %></p>
+
+    <%= button_to 'Index', articles_path, method: :get %>
+    <%= button_to 'Edit', edit_article_path(@article), method: :get %>
+    <%= button_to 'Delete', article_path(@article), method: :delete, data: {confirm: 'Are you sure'} %>

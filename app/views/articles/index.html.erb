@@ -1,0 +1,14 @@
+<h1>All articles</h1>
+
+<% if @articles.nil? %>
+
+<% else %>
+
+<ul>
+<% @articles.each do |article| %>
+<li>
+<%= link_to article.title, article_path(article) %></li>
+<% end %>
+<% end %>
+</ul>
+<%= link_to 'Create article', new_article_path, method: :get, class: 'new_article' %>
